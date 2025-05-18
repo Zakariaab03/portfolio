@@ -25,7 +25,8 @@ CREATE TABLE IF NOT EXISTS messages (
 
 ALTER TABLE messages ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY "Anyone can insert messages"
+-- Allow anyone to insert messages
+CREATE POLICY "Allow public to insert messages"
   ON messages
   FOR INSERT
   TO public
