@@ -1,38 +1,38 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Languages, Brain, Rocket, PenTool as Tool, Database, Globe, Server } from 'lucide-react';
+import { Code, Languages, Brain, Rocket, PenTool as Tool, Database, Globe, Server, Terminal, GitBranch, Monitor } from 'lucide-react';
 
 export const Skills: React.FC = () => {
   const technicalSkills = [
     {
       category: "Langages de Programmation",
       icon: Code,
-      skills: ["Python", "Java", "JavaScript", "TypeScript"]
+      skills: ["Python", "Java", "JavaScript", "TypeScript", "C#", "PHP"]
     },
     {
       category: "Développement Frontend",
       icon: Globe,
-      skills: ["React", "HTML5", "CSS3", "Tailwind CSS", "Framer Motion"]
+      skills: ["HTML5", "CSS3", "Tailwind CSS", "React", "Framer Motion", "Blazor"]
     },
     {
       category: "Développement Backend",
       icon: Server,
-      skills: ["Node.js", "Supabase", "SQL"]
+      skills: ["Node.js", "Supabase", "SQL", ".NET Core", "ASP.NET"]
     },
     {
       category: "Bases de Données",
       icon: Database,
-      skills: ["PostgreSQL", "MySQL"]
+      skills: ["MySQL", "PostgreSQL"]
     },
     {
       category: "DevOps & Outils",
-      icon: Rocket,
-      skills: ["Git", "GitLab", "Vite", "npm"]
+      icon: GitBranch,
+      skills: ["Git", "GitLab", "GitHub", "Azure", "CI/CD", "Vite", "npm", "Gradle"]
     },
     {
       category: "Environnement de Développement",
-      icon: Tool,
-      skills: ["VS Code", "Visual Studio", "Linux", "Windows"]
+      icon: Monitor,
+      skills: ["Visual Studio", "VS Code", "Linux", "Windows"]
     }
   ];
 
