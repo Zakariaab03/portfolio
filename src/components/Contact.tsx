@@ -88,6 +88,10 @@ export const Contact: React.FC = () => {
                     <GraduationCap size={18} className="text-blue-400" />
                     <span className="text-gray-300">Master Informatique</span>
                   </div>
+                  <div className="flex items-center gap-2 bg-emerald-500/10 px-4 py-2 rounded-full">
+                    <Briefcase size={18} className="text-emerald-400" />
+                    <span className="text-gray-300">Disponible septembre 2026</span>
+                  </div>
                 </div>
               </div>
             </div>

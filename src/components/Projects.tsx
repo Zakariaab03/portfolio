@@ -42,8 +42,8 @@ export const Projects: React.FC = () => {
     },
     {
       title: "Jeu Sokoban",
-      description: "Implémentation d’un jeu basé sur la programmation orientée objet.",
-      technologies: ["Java", "POO"],
+      description: "Implémentation du jeu Sokoban en terminal avec affichage graphique via la bibliothèque ncurses.",
+      technologies: ["C", "ncurses"],
       category: "Jeu / POO",
       link: "https://gitlab.isima.fr/zaabouelaz/jeu-de-sokoban.git"
     },

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github as GitHub, Linkedin, Mail, MapPin, ExternalLink, Code, Terminal, Cpu, Globe, Database } from 'lucide-react';
+import { Github as GitHub, Linkedin, Mail, MapPin, ExternalLink, Code, Terminal, Cpu, Globe, Database, FileDown } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
@@ -123,11 +123,23 @@ export const Hero: React.FC = () => {
                 href="#projects"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full md:w-auto px-8 py-3 bg-white/5 backdrop-blur-sm border border-white/10 text-white 
+                className="w-full md:w-auto px-8 py-3 bg-white/5 backdrop-blur-sm border border-white/10 text-white
                 rounded-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center group"
               >
                 <Terminal size={18} className="mr-2 group-hover:translate-x-1 transition-transform" />
                 Mes Projets
+              </motion.a>
+              <motion.a
+                href="/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full md:w-auto px-8 py-3 bg-white/5 backdrop-blur-sm border border-white/10 text-white
+                rounded-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center group"
+              >
+                <FileDown size={18} className="mr-2 group-hover:translate-y-0.5 transition-transform" />
+                Télécharger mon CV
               </motion.a>
             </div>
           </motion.div>
