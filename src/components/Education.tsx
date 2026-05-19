@@ -188,7 +188,7 @@ export const Education: React.FC = () => {
                     ${selectedEducation.mood === "challenging" ? 'bg-purple-500/20' : 'bg-blue-500/20'}`}
                   >
                     {selectedEducation.mood === "challenging" ? (
-                      <Heart size={24} className="text-purple-400" />
+                      <GraduationCap size={24} className="text-purple-400" />
                     ) : (
                       <BookOpen size={24} className="text-blue-400" />
                     )}

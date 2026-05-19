@@ -7,32 +7,32 @@ export const Skills: React.FC = () => {
     {
       category: "Langages de Programmation",
       icon: Code,
-      skills: ["Java", "Python", "JavaScript", "C#", "C"]
+      skills: ["Java", "Python", "JavaScript", "TypeScript", "C#", "C"]
     },
     {
       category: "Développement logiciel",
       icon: Brain,
-      skills: ["POO", "Algorithmique", "Structures de données", "Conception d’applications"]
+      skills: ["POO", "Algorithmique", "Structures de données", "Spring Boot", "Maven"]
     },
     {
       category: "Web & APIs",
       icon: Globe,
-      skills: ["Node.js", "React", "ASP.NET / .NET Core", "REST API"]
+      skills: ["React", "Vue.js 3", "Node.js", "ASP.NET / .NET Core", "REST API", "JWT"]
     },
     {
       category: "Bases de données",
       icon: Database,
-      skills: ["PostgreSQL", "MySQL", "SQL", "Modélisation"]
+      skills: ["PostgreSQL", "MySQL", "SQL", "pgvector", "Modélisation"]
     },
     {
       category: "Outils & environnements",
       icon: GitBranch,
-      skills: ["Git", "GitLab", "GitHub", "Docker", "Linux", "CI/CD", "npm", "Gradle"]
+      skills: ["Git", "Docker", "Linux", "CI/CD", "GitHub", "GitLab", "npm", "Gradle"]
     },
     {
-      category: "Data & statistiques",
+      category: "Cybersécurité & Data",
       icon: Terminal,
-      skills: ["Python", "Statistiques", "Simulation Monte Carlo"]
+      skills: ["Sécurité web", "Headers HTTP", "Analyse de vulnérabilités", "Statistiques", "Simulation Monte Carlo"]
     }
   ];
 

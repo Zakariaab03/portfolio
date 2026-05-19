@@ -14,7 +14,7 @@ export const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       title: "Application web de recherche d’images par similarité",
-      description: "Application web full-stack client-serveur développée en équipe de 3 dans le cadre du cours PDL — L3 Informatique, Université de Bordeaux. Backend Java Spring Boot avec API REST, calcul de descripteurs visuels (RGB, HSV, Gradient via BoofCV) et recherche par similarité via pgvector. Frontend Vue.js 3 / TypeScript avec galerie interactive, jeu de similarité, leaderboard et authentification JWT.",
+      description: "Application full-stack de recherche d'images par similarité visuelle, développée en équipe de 3 (L3, Université de Bordeaux). Backend Spring Boot avec descripteurs visuels (BoofCV) et recherche vectorielle (pgvector). Frontend Vue.js 3 avec galerie interactive, jeu de similarité et authentification JWT.",
       technologies: ["Java", "Spring Boot", "Vue.js 3", "TypeScript", "PostgreSQL", "pgvector", "Docker", "JWT", "Maven"],
       category: "Développement logiciel",
       link: "https://github.com/Zakariaab03/image-similarity-search"
