@@ -144,6 +144,28 @@ Développement d’un jeu utilisant Python.
 
 ---
 
+## 🐳 Lancer avec Docker
+
+Le portfolio est conteneurisé via un build multi-stage (Node pour le build → nginx pour le service).
+
+```bash
+# Construire l'image
+docker build -t portfolio .
+
+# Lancer le conteneur (http://localhost:8080)
+docker run -p 8080:80 portfolio
+```
+
+> Le formulaire de contact (Supabase) est optionnel. Pour l'activer, passer les variables au build :
+> ```bash
+> docker build \
+>   --build-arg VITE_SUPABASE_URL=... \
+>   --build-arg VITE_SUPABASE_ANON_KEY=... \
+>   -t portfolio .
+> ```
+
+---
+
 ## ⚡ En recherche
 
 🔍 Recherche une **alternance en informatique** (développement, cybersécurité, systèmes) à partir de 2026.
