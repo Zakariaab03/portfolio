@@ -35,8 +35,8 @@ export const Projects: React.FC = () => {
     },
     {
       title: "Système de gestion de bâtiments",
-      description: "Application web permettant la gestion de bâtiments et d’appartements.",
-      technologies: ["Java", "SQL", "FreeMarker"],
+      description: "Application web MVC de gestion d’immeubles et d’appartements : authentification, rôles (locataire, propriétaire, syndic) et opérations CRUD.",
+      technologies: ["Java", "FreeMarker", "H2", "MVC"],
       category: "Développement logiciel",
       link: "https://gitlab.isima.fr/zaabouelaz/web-serveur.git"
     },
@@ -49,21 +49,21 @@ export const Projects: React.FC = () => {
     },
     {
       title: "Jeu de la Vie avec base de données",
-      description: "Simulation du jeu de la vie avec gestion des données persistantes.",
-      technologies: ["Java", "SQL", "Base de données"],
+      description: "Version web du jeu de la vie de Conway : édition, sauvegarde et évolution de grilles persistées en base de données.",
+      technologies: ["Java", "FreeMarker", "H2"],
       category: "Base de données",
       link: "https://gitlab.isima.fr/zaabouelaz/jeu-de-la-vie.git"
     },
     {
       title: "Simulation de Monte Carlo",
-      description: "Simulation statistique avec calcul d’intervalles de confiance.",
-      technologies: ["C", "Statistiques", "Simulation"],
+      description: "Estimation de π par la méthode de Monte Carlo, avec générateur Mersenne Twister et intervalles de confiance à 99 %.",
+      technologies: ["C", "Mersenne Twister", "Statistiques"],
       category: "Data",
       link: "https://gitlab.isima.fr/zaabouelaz/simulation.git"
     },
     {
       title: "Jeu de Cartes",
-      description: "Développement d’un jeu utilisant Python et des structures de données.",
+      description: "Jeu de cartes « La Réussite des Alliances » en Python, avec modes de jeu manuel et automatique.",
       technologies: ["Python", "Structures de données"],
       category: "Développement logiciel",
       link: "https://gitlab.isima.fr/zaabouelaz/reussite-des-alliances.git"

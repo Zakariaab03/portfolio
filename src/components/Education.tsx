@@ -22,7 +22,7 @@ export const Education: React.FC = () => {
       description: "Approfondissement des fondamentaux : programmation orientée objet, algorithmique avancée, bases de données et développement logiciel.",
       icon: GraduationCap,
       mood: "challenging",
-      details: "Parcours consacré aux bases de l’informatique, notamment la programmation, l’algorithmique et les bases de données. Cette année m’a permis de consolider mes fondamentaux techniques tout en développant ma capacité d’adaptation et de persévérance face à des circonstances difficiles, renforçant ainsi ma rigueur et ma résilience dans mes études."
+      details: "Parcours consacré aux bases de l’informatique, notamment la programmation, l’algorithmique et les bases de données. Cette année m’a permis de consolider mes fondamentaux techniques, de développer une résilience importante et de mieux me connaître."
     },
     {
       degree: "Licence 1 Math-Info",

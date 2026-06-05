@@ -217,7 +217,7 @@ export const Hero: React.FC = () => {
           className="flex flex-wrap justify-center gap-3 mt-8 md:mt-16"
         >
           {[
-            { icon: MapPin, text: "Canéjan" },
+            { icon: MapPin, text: "Bordeaux" },
             {
               icon: Mail,
               text: "abouelazzezakaria@gmail.com",

@@ -117,7 +117,7 @@ export const Contact: React.FC = () => {
                     href: "https://mail.google.com/mail/?view=cm&fs=1&to=abouelazzezakaria@gmail.com",
                     isLink: true
                   },
-                  { icon: MapPin, label: "Ville", value: "Canéjan" },
+                  { icon: MapPin, label: "Ville", value: "Bordeaux" },
                   {
                     icon: Linkedin,
                     label: "LinkedIn",

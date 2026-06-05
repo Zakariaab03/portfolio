@@ -70,12 +70,12 @@ export const Footer: React.FC = () => {
           
           <div className="flex items-center justify-center">
             <MapPin size={16} className="text-gray-400 mr-2" />
-            <span className="text-gray-400">Canéjan</span>
+            <span className="text-gray-400">Bordeaux</span>
           </div>
         </div>
         
         <div className="text-center mt-8 text-gray-500 text-sm">
-          <p>© {new Date().getFullYear()} Zakaria Abou El Azze. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Zakaria Abou El Azze. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
