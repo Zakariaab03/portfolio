@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github as GitHub, Mail, MapPin, Phone, ArrowUp } from 'lucide-react';
+import { Github as GitHub, Linkedin, Mail, MapPin, Phone, ArrowUp } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -30,8 +30,26 @@ export const Footer: React.FC = () => {
             >
               <Mail size={20} />
             </a>
-            <a 
-              href="https://gitlab.isima.fr/zaabouelaz" 
+            <a
+              href="https://www.linkedin.com/in/zakariaabouelazze"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-teal-400 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={20} />
+            </a>
+            <a
+              href="https://github.com/Zakariaab03"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-teal-400 transition-colors"
+              aria-label="GitHub"
+            >
+              <GitHub size={20} />
+            </a>
+            <a
+              href="https://gitlab.isima.fr/zaabouelaz"
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-gray-400 hover:text-teal-400 transition-colors"
