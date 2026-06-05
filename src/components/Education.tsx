@@ -9,8 +9,8 @@ export const Education: React.FC = () => {
     {
       degree: "Licence 3 Informatique",
       institution: "Université de Bordeaux",
-      period: "En cours",
-      description: "Parcours actuel en informatique, orienté développement logiciel, cybersécurité, cloud et bases de données.",
+      period: "2025 – 2026",
+      description: "Parcours actuel en informatique, orienté développement logiciel, cybersécurité et bases de données.",
       icon: Binary,
       mood: "hopeful",
       details: "Année durant laquelle j’ai renforcé mes compétences en programmation, algorithmique et bases de données à travers plusieurs projets en Python, Java et développement web, me permettant de devenir plus autonome dans la conception et la réalisation de solutions informatiques."

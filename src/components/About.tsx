@@ -56,7 +56,7 @@ export const About: React.FC = () => {
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Attiré par les problématiques techniques complexes, je m’intéresse particulièrement aux domaines de l’ingénierie logicielle, de la cybersécurité, du cloud et des systèmes distribués. Mon parcours m’a permis de développer rigueur, autonomie et capacité d’adaptation.
+              Attiré par les problématiques techniques complexes, je m’intéresse particulièrement aux domaines de l’ingénierie logicielle, de la cybersécurité et des systèmes distribués. Mon parcours m’a permis de développer rigueur, autonomie et capacité d’adaptation.
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed">

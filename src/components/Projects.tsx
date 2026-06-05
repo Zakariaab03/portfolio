@@ -21,7 +21,7 @@ export const Projects: React.FC = () => {
     },
     {
       title: "Web Security Scanner",
-      description: "Outil d’analyse de vulnérabilités web simples : vérification HTTPS, analyse des headers HTTP de sécurité, détection des formulaires HTML, extraction de liens internes et génération de rapport JSON.",
+      description: "Outil d’analyse de vulnérabilités web : vérification HTTPS, analyse des headers HTTP de sécurité, détection des formulaires HTML, extraction de liens internes et génération de rapport JSON.",
       technologies: ["Python", "HTTPS", "Headers HTTP", "JSON"],
       category: "Cybersécurité",
       link: "https://github.com/Zakariaab03/Web-Security-Scanner"

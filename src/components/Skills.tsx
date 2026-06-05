@@ -44,7 +44,7 @@ export const Skills: React.FC = () => {
     { name: "Pensée analytique", icon: Brain }
   ];
   
-  const languages = ["Arabe", "Français", "Anglais"];
+  const languages = ["Arabe — langue maternelle", "Français — langue principale", "Anglais — B2 (Linguaskill)"];
 
   return (
     <section id="skills" className="py-20 bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900">

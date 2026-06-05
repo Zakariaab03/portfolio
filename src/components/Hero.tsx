@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github as GitHub, Linkedin, Mail, MapPin, ExternalLink, Code, Terminal, Cpu, Globe, Database, FileDown } from 'lucide-react';
+import { Github as GitHub, Linkedin, Mail, MapPin, ExternalLink, Code, Terminal, Globe, Database, FileDown } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
@@ -24,7 +24,6 @@ export const Hero: React.FC = () => {
           'Docker',
           'SQL',
           'Node.js',
-          'Cloud',
           'Git',
           'Sécurité'
         ].map((term, index) => (
@@ -86,14 +85,13 @@ export const Hero: React.FC = () => {
             </div>
 
             <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              Étudiant en Licence 3 Informatique à l’Université de Bordeaux, je m’intéresse au développement logiciel, à la cybersécurité, aux infrastructures cloud et à l’analyse de données. Je souhaite poursuivre en Master Informatique en alternance afin de développer mes compétences techniques et acquérir une expérience professionnelle.
+              Étudiant en Licence 3 Informatique à l’Université de Bordeaux, je m’intéresse au développement logiciel, à la cybersécurité et à l’analyse de données. Je souhaite poursuivre en Master Informatique en alternance afin de développer mes compétences techniques et acquérir une expérience professionnelle.
             </p>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-3">
               {[
                 { icon: Globe, text: "Développement logiciel" },
-                { icon: Database, text: "Cybersécurité" },
-                { icon: Cpu, text: "Cloud" }
+                { icon: Database, text: "Cybersécurité" }
               ].map((tech, index) => (
                 <motion.div
                   key={index}
