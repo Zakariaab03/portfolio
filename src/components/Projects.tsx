@@ -44,6 +44,7 @@ export const Projects: React.FC = () => {
       category: "Cybersécurité",
       link: "https://github.com/Zakariaab03/Web-Security-Scanner",
       media: [
+        { type: 'image', src: '/projects/scanner/assessment.webp', alt: "Bilan de sécurité : score, note et findings par sévérité" },
         { type: 'image', src: '/projects/scanner/terminal.webp', alt: "Exécution du scanner en terminal" },
         { type: 'image', src: '/projects/scanner/rapport-json.webp', alt: "Extrait du rapport JSON généré" },
       ],
