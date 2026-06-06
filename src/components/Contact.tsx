@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Github, Linkedin, ExternalLink, Send, CheckCircle, GraduationCap, Briefcase } from 'lucide-react';
-import { supabase } from '../lib/supabase';
+
+const encode = (data: Record<string, string>) =>
+  Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
 
 export const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isError, setIsError] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,26 +27,27 @@ export const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+    setIsSubmitting(true);
+    setIsError(false);
+
     try {
-      if (!supabase) {
-        const subject = encodeURIComponent(`Message portfolio de ${formData.name}`);
-        const body = encodeURIComponent(`Nom: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`);
-        window.location.href = `mailto:abouelazzezakaria@gmail.com?subject=${subject}&body=${body}`;
-        return;
-      }
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'contact', ...formData }),
+      });
 
-      const { error } = await supabase
-        .from('messages')
-        .insert([formData]);
+      if (!response.ok) throw new Error(`Réponse ${response.status}`);
 
-      if (error) throw error;
-      
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setIsSubmitted(false), 3000);
+      setTimeout(() => setIsSubmitted(false), 4000);
     } catch (error) {
       console.error('Error sending message:', error);
+      setIsError(true);
+      setTimeout(() => setIsError(false), 5000);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -183,12 +190,26 @@ export const Contact: React.FC = () => {
               className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10"
             >
               <h3 className="text-2xl font-semibold text-white mb-8">Envoyez-moi un Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p className="hidden">
+                  <label>
+                    Ne pas remplir : <input name="bot-field" onChange={handleChange} />
+                  </label>
+                </p>
                 <div>
                   <label htmlFor="name" className="block text-gray-300 mb-2 text-sm">Nom</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     id="name"
+                    name="name"
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500
@@ -200,9 +221,10 @@ export const Contact: React.FC = () => {
                 
                 <div>
                   <label htmlFor="email" className="block text-gray-300 mb-2 text-sm">Email</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     id="email"
+                    name="email"
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500
@@ -214,8 +236,9 @@ export const Contact: React.FC = () => {
                 
                 <div>
                   <label htmlFor="message" className="block text-gray-300 mb-2 text-sm">Message</label>
-                  <textarea 
+                  <textarea
                     id="message"
+                    name="message"
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
@@ -226,21 +249,34 @@ export const Contact: React.FC = () => {
                   ></textarea>
                 </div>
                 
-                <motion.button 
+                <motion.button
                   type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  disabled={isSubmitting}
+                  whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                  whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                   className={`w-full py-4 rounded-lg font-medium flex items-center justify-center gap-2
-                    transition-all duration-300 ${
-                      isSubmitted 
-                        ? 'bg-green-600 hover:bg-green-700' 
-                        : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'
+                    transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed ${
+                      isSubmitted
+                        ? 'bg-green-600 hover:bg-green-700'
+                        : isError
+                          ? 'bg-red-600 hover:bg-red-700'
+                          : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'
                     }`}
                 >
                   {isSubmitted ? (
                     <>
                       <CheckCircle size={20} />
-                      Message Envoyé !
+                      Message envoyé !
+                    </>
+                  ) : isSubmitting ? (
+                    <>
+                      <Send size={20} className="animate-pulse" />
+                      Envoi…
+                    </>
+                  ) : isError ? (
+                    <>
+                      <Send size={20} />
+                      Erreur, réessayer
                     </>
                   ) : (
                     <>
@@ -249,6 +285,11 @@ export const Contact: React.FC = () => {
                     </>
                   )}
                 </motion.button>
+                {isError && (
+                  <p className="text-red-400 text-sm text-center">
+                    L'envoi a échoué. Vous pouvez aussi m'écrire directement à abouelazzezakaria@gmail.com.
+                  </p>
+                )}
               </form>
             </motion.div>
           </div>

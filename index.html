@@ -23,6 +23,13 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Formulaire caché détecté par Netlify au build (le formulaire visible est rendu par React) -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
