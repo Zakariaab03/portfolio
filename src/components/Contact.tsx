@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Github, Linkedin, ExternalLink, Send, CheckCircle, GraduationCap, Briefcase } from 'lucide-react';
 
-const encode = (data: Record<string, string>) =>
-  Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-
 export const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,16 +20,22 @@ export const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setIsError(false);
+
+    // Corps construit à partir des champs réels du formulaire :
+    // inclut automatiquement form-name et le honeypot bot-field attendus par Netlify.
+    const body = new URLSearchParams(
+      new FormData(e.currentTarget) as unknown as Record<string, string>
+    ).toString();
 
     try {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'contact', ...formData }),
+        body,
       });
 
       if (!response.ok) throw new Error(`Réponse ${response.status}`);
@@ -201,7 +202,7 @@ export const Contact: React.FC = () => {
                 <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden">
                   <label>
-                    Ne pas remplir : <input name="bot-field" onChange={handleChange} />
+                    Ne pas remplir : <input name="bot-field" tabIndex={-1} autoComplete="off" />
                   </label>
                 </p>
                 <div>

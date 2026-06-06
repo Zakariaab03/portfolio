@@ -95,7 +95,7 @@ Outil d’analyse de vulnérabilités web.
 ### 🌐 Portfolio web dockerisé
 Portfolio personnel développé avec une stack moderne et conteneurisé avec Docker.
 
-**Tech :** TypeScript, React, Vite, Tailwind, Docker, Supabase  
+**Tech :** TypeScript, React, Vite, Tailwind, Docker, Netlify  
 🔗 [Voir le projet](https://github.com/Zakariaab03/portfolio)
 
 ---
@@ -176,13 +176,7 @@ docker build -t portfolio .
 docker run -p 8080:80 portfolio
 ```
 
-> Le formulaire de contact (Supabase) est optionnel. Pour l'activer, passer les variables au build :
-> ```bash
-> docker build \
->   --build-arg VITE_SUPABASE_URL=... \
->   --build-arg VITE_SUPABASE_ANON_KEY=... \
->   -t portfolio .
-> ```
+> Le formulaire de contact est géré par **Netlify Forms** sur le site déployé (aucune configuration nécessaire au build).
 
 ---
 

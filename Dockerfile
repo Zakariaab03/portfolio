@@ -8,13 +8,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 
-# Variables d'environnement Supabase (optionnelles, injectées au moment du build)
-# Sans elles, le formulaire de contact bascule proprement sur un lien mailto.
-ARG VITE_SUPABASE_URL
-ARG VITE_SUPABASE_ANON_KEY
-ENV VITE_SUPABASE_URL=$VITE_SUPABASE_URL
-ENV VITE_SUPABASE_ANON_KEY=$VITE_SUPABASE_ANON_KEY
-
 # Build de production
 COPY . .
 RUN npm run build
