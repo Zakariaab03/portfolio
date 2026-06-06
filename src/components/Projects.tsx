@@ -55,7 +55,6 @@ export const Projects: React.FC = () => {
       technologies: ["TypeScript", "Vite", "Tailwind", "Docker"],
       category: "Développement Web",
       link: "https://github.com/Zakariaab03/portfolio",
-      demo: "https://zakariaabouelazze.com",
     },
     {
       title: "Système de gestion de bâtiments",
