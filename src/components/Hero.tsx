@@ -74,7 +74,7 @@ export const Hero: React.FC = () => {
                 className="inline-flex items-center bg-blue-500/10 rounded-full px-4 py-2"
               >
                 <Code className="text-blue-400 mr-2" size={18} />
-                <span className="text-blue-200 font-medium text-sm md:text-base">Étudiant en L3 Informatique</span>
+                <span className="text-blue-200 font-medium text-sm md:text-base">Étudiant en Master Informatique</span>
               </motion.div>
               
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
@@ -85,7 +85,7 @@ export const Hero: React.FC = () => {
             </div>
 
             <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              Étudiant en Licence 3 Informatique à l’Université de Bordeaux, je m’intéresse au développement logiciel, à la cybersécurité et à l’analyse de données. Je souhaite poursuivre en Master Informatique en alternance afin de développer mes compétences techniques et acquérir une expérience professionnelle.
+              Étudiant en Master Informatique (M1) à l’Université de Bordeaux, je m’intéresse au développement logiciel, à la cybersécurité et à l’analyse de données. Je vise une alternance en deuxième année de Master (rentrée 2027) afin de développer mes compétences techniques et acquérir une expérience professionnelle.
             </p>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-3">

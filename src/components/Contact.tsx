@@ -83,9 +83,9 @@ export const Contact: React.FC = () => {
                 <GraduationCap size={32} className="text-blue-400" />
               </div>
               <div>
-                <h3 className="text-2xl font-semibold text-white mb-4">Étudiant en Licence 3 Informatique</h3>
+                <h3 className="text-2xl font-semibold text-white mb-4">Étudiant en Master Informatique</h3>
                 <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                  Actuellement étudiant à l’Université de Bordeaux, je souhaite poursuivre en Master Informatique, idéalement en alternance, afin de développer mes compétences techniques et acquérir une expérience professionnelle.
+                  Étudiant en Master Informatique à l’Université de Bordeaux, je vise une alternance pour ma deuxième année de Master afin de développer mes compétences techniques et acquérir une expérience professionnelle.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="flex items-center gap-2 bg-blue-500/10 px-4 py-2 rounded-full">
@@ -98,7 +98,7 @@ export const Contact: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-2 bg-emerald-500/10 px-4 py-2 rounded-full">
                     <Briefcase size={18} className="text-emerald-400" />
-                    <span className="text-gray-300">Disponible septembre 2026</span>
+                    <span className="text-gray-300">Alternance visée : septembre 2027</span>
                   </div>
                 </div>
               </div>

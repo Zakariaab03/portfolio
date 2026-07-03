@@ -22,7 +22,7 @@ export const About: React.FC = () => {
     {
       icon: Target,
       title: "Objectif",
-      description: "Poursuivre en Master Informatique en alternance"
+      description: "Réussir mon Master et poursuivre en alternance en M2"
     }
   ];
 
@@ -52,7 +52,7 @@ export const About: React.FC = () => {
             className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-white/10"
           >
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Étudiant en Licence 3 Informatique à l’Université de Bordeaux, j’ai développé des compétences solides en programmation, algorithmique, bases de données et développement d’applications à travers différents projets académiques et personnels.
+              Étudiant en Master Informatique à l’Université de Bordeaux, j’ai développé des compétences solides en programmation, algorithmique, bases de données et développement d’applications à travers différents projets académiques et personnels.
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
@@ -60,7 +60,7 @@ export const About: React.FC = () => {
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed">
-              Je souhaite intégrer un Master Informatique en alternance afin de continuer à progresser techniquement tout en m’insérant dans un environnement professionnel.
+              J’intègre le Master Informatique de l’Université de Bordeaux en septembre 2026, avec pour objectif une alternance en deuxième année afin de continuer à progresser techniquement tout en m’insérant dans un environnement professionnel.
             </p>
           </motion.div>
 

@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
             <a href="#" className="text-2xl font-bold text-white flex items-center">
               ZA<span className="text-teal-400">.</span>
             </a>
-            <p className="text-gray-400 mt-2">Étudiant en Licence 3 Informatique</p>
+            <p className="text-gray-400 mt-2">Étudiant en Master Informatique</p>
           </div>
           
           <div className="flex justify-center md:justify-end items-center space-x-6">

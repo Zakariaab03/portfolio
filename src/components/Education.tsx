@@ -7,10 +7,19 @@ export const Education: React.FC = () => {
 
   const educationData = [
     {
+      degree: "Master Informatique (M1)",
+      institution: "Université de Bordeaux",
+      period: "2026 – 2027",
+      description: "Première année de Master, à partir de septembre 2026. Objectif : alternance en deuxième année (M2).",
+      icon: GraduationCap,
+      mood: "hopeful",
+      details: "Admis au Master Informatique de l’Université de Bordeaux (rentrée septembre 2026). Première année consacrée à consolider un socle généraliste — algorithmique, génie logiciel, systèmes, bases de données — avant le choix de spécialité et une alternance en M2."
+    },
+    {
       degree: "Licence 3 Informatique",
       institution: "Université de Bordeaux",
       period: "2025 – 2026",
-      description: "Parcours actuel en informatique, orienté développement logiciel, cybersécurité et bases de données.",
+      description: "Troisième année de licence, orientée développement logiciel, cybersécurité et bases de données.",
       icon: Binary,
       mood: "hopeful",
       details: "Année durant laquelle j’ai renforcé mes compétences en programmation, algorithmique et bases de données à travers plusieurs projets en Python, Java et développement web, me permettant de devenir plus autonome dans la conception et la réalisation de solutions informatiques."
